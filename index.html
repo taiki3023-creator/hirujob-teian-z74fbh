@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>昼ジョブ 動画企画提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1e3a5f;
+    --cyan:#06b6d4;
+    --grad:linear-gradient(135deg,#1e3a5f 0%,#06b6d4 100%);
+    --grad-rev:linear-gradient(135deg,#06b6d4 0%,#1e3a5f 100%);
+    --ink:#1a2332;
+    --ink-soft:#475066;
+    --gray:#f4f7fa;
+    --line:#e3e8ef;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Noto Sans JP","Inter",system-ui,sans-serif;
+    color:var(--ink);background:var(--white);
+    line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 28px;}
+  section{padding:80px 0;}
+  .label{
+    display:inline-block;font-size:12px;letter-spacing:.2em;font-weight:700;
+    color:var(--cyan);text-transform:uppercase;margin-bottom:18px;
+  }
+  h2{font-size:30px;font-weight:900;line-height:1.4;color:var(--ink);letter-spacing:.01em;}
+  h3{font-size:21px;font-weight:700;color:var(--ink);}
+  p{color:var(--ink-soft);}
+  .accent-line{width:54px;height:4px;background:var(--grad);border-radius:3px;margin:0 0 26px;}
+
+  /* HERO */
+  .hero{background:var(--grad);color:#fff;padding:100px 0 90px;position:relative;overflow:hidden;}
+  .hero:after{
+    content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;
+    background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 70%);border-radius:50%;
+  }
+  .hero .eyebrow{font-size:13px;letter-spacing:.28em;font-weight:700;color:#9fe7f5;text-transform:uppercase;margin-bottom:24px;}
+  .hero h1{font-size:46px;font-weight:900;line-height:1.34;color:#fff;margin-bottom:24px;letter-spacing:.01em;}
+  .hero .lead{font-size:18px;color:rgba(255,255,255,.92);max-width:620px;line-height:1.9;position:relative;z-index:1;}
+  .hero .hl{color:#8be9f8;}
+
+  .bg-white{background:var(--white);}
+  .bg-gray{background:var(--gray);}
+
+  .lead-text{font-size:17px;line-height:2.0;color:var(--ink-soft);}
+  .lead-text strong{color:var(--navy);font-weight:700;}
+
+  /* キャスト */
+  .cast-grid{display:flex;gap:18px;margin-top:32px;flex-wrap:wrap;}
+  .cast-card{
+    flex:1;min-width:200px;background:var(--white);border:1px solid var(--line);
+    border-radius:12px;padding:30px 28px;box-shadow:0 4px 18px rgba(30,58,95,.06);
+    position:relative;overflow:hidden;
+  }
+  .cast-card:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:var(--grad);}
+  .cast-card .role{font-size:12px;letter-spacing:.12em;color:var(--cyan);font-weight:700;margin-bottom:10px;}
+  .cast-card .name{font-size:25px;font-weight:900;color:var(--ink);}
+  .cast-sub{margin-top:34px;}
+  .cast-sub .sub-title{font-size:13px;letter-spacing:.08em;color:var(--ink-soft);font-weight:700;margin-bottom:16px;}
+  .opt-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .opt-pill{
+    background:var(--white);border:1.5px solid var(--line);border-radius:999px;
+    padding:11px 22px;font-size:15px;color:var(--ink-soft);display:flex;align-items:center;gap:12px;
+    box-shadow:0 2px 8px rgba(30,58,95,.05);
+  }
+  .opt-pill .price{color:var(--cyan);font-weight:800;}
+
+  /* 企画① */
+  .plan-no{
+    display:inline-block;font-family:"Inter",sans-serif;font-size:13px;letter-spacing:.18em;
+    color:#fff;font-weight:800;background:var(--grad);padding:6px 16px;border-radius:6px;margin-bottom:18px;
+  }
+  .overview{
+    font-size:17px;line-height:2.0;color:var(--ink-soft);margin-top:24px;
+    background:var(--white);border-left:5px solid var(--cyan);border-radius:0 10px 10px 0;
+    padding:22px 26px;box-shadow:0 4px 18px rgba(30,58,95,.05);
+  }
+
+  /* メリット */
+  .merit-list{list-style:none;margin-top:30px;}
+  .merit-list li{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line);}
+  .merit-list li:last-child{border-bottom:none;}
+  .merit-list .mk{
+    flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--grad);color:#fff;
+    font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .merit-list .mt{font-size:16px;color:var(--ink);line-height:1.7;}
+
+  /* タイムライン */
+  .flow{margin-top:38px;}
+  .flow-item{position:relative;padding:0 0 36px 70px;}
+  .flow-item:before{content:"";position:absolute;left:24px;top:8px;bottom:-4px;width:2px;background:var(--line);}
+  .flow-item:last-child:before{display:none;}
+  .flow-num{
+    position:absolute;left:0;top:0;width:50px;height:50px;border-radius:50%;
+    background:var(--grad);color:#fff;font-family:"Inter",sans-serif;font-size:18px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;z-index:1;box-shadow:0 4px 14px rgba(6,182,212,.32);
+  }
+  .flow-step{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:20px 24px;box-shadow:0 4px 16px rgba(30,58,95,.05);}
+  .flow-step .st{font-size:18px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+  .flow-step .sd{font-size:15px;color:var(--ink-soft);line-height:1.85;}
+
+  /* 想定尺 */
+  .spec-card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:34px 32px;margin-top:30px;box-shadow:0 6px 22px rgba(30,58,95,.07);}
+  .spec-row{display:flex;gap:18px;padding:16px 0;border-bottom:1px dashed var(--line);}
+  .spec-row:last-child{border-bottom:none;}
+  .spec-k{flex-shrink:0;width:120px;font-size:13px;letter-spacing:.05em;color:#fff;font-weight:700;background:var(--grad);border-radius:6px;padding:5px 12px;height:fit-content;text-align:center;}
+  .spec-v{font-size:16px;color:var(--ink);line-height:1.7;padding-top:2px;}
+
+  footer{background:var(--navy);color:rgba(255,255,255,.7);text-align:center;padding:46px 28px;}
+  footer .fl{font-size:18px;font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:8px;}
+  footer .fs{font-size:13px;color:#8be9f8;letter-spacing:.1em;}
+
+  @media(max-width:640px){
+    .hero h1{font-size:33px;}
+    .hero .lead{font-size:16px;}
+    h2{font-size:25px;}
+    section{padding:60px 0;}
+    .cast-grid{flex-direction:column;}
+    .spec-row{flex-direction:column;gap:6px;}
+    .spec-k{width:auto;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Content Plan — 昼ジョブ</div>
+      <h1>「説明」ではなく<br><span class="hl">体験</span>で魅せる動画企画</h1>
+      <p class="lead">あいら・まなみが利用者として転職プロセスを駆け足で体験。視聴者が「自分が使ったらどうなるか」を自然にイメージできる、サービス密着型の動画提案です。</p>
+    </div>
+  </header>
+
+  <!-- 狙い -->
+  <section class="bg-white">
+    <div class="wrap">
+      <span class="label">Concept</span>
+      <div class="accent-line"></div>
+      <h2>企画の狙い</h2>
+      <p class="lead-text" style="margin-top:24px;">
+        昼ジョブのサービスを <strong>“説明”ではなく“体験”</strong> で見せます。あいら・まなみが実際の利用者として転職プロセスを駆け足で体験することで、視聴者が「自分が使ったらどうなるか」を具体的にイメージできる。<strong>サービス紹介と利用イメージの訴求を、動画1本で両立</strong>させます。
+      </p>
+    </div>
+  </section>
+
+  <!-- 出演者 -->
+  <section class="bg-gray">
+    <div class="wrap">
+      <span class="label">Cast</span>
+      <div class="accent-line"></div>
+      <h2>出演者・キャスティング</h2>
+      <div class="cast-grid">
+        <div class="cast-card">
+          <div class="role">基本キャスト</div>
+          <div class="name">まなみ</div>
+        </div>
+        <div class="cast-card">
+          <div class="role">基本キャスト</div>
+          <div class="name">あいら</div>
+        </div>
+      </div>
+      <div class="cast-sub">
+        <div class="sub-title">追加演者オプション（必要に応じて起用）</div>
+        <div class="opt-row">
+          <div class="opt-pill">キャバ嬢 <span class="price">2万円</span></div>
+          <div class="opt-pill">芹野 <span class="price">10万円</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企画① -->
+  <section class="bg-white">
+    <div class="wrap">
+      <div class="plan-no">PLAN 01</div>
+      <h2>実際のサービスを受ける</h2>
+      <p class="overview">
+        あいら・まなみが「転職する」と仮定し、昼ジョブで実際に提供されるサービスを駆け足で受けていく密着型の企画。自然な流れでサービスの紹介と中身を見せられるので、視聴者が利用時の自分を想像しやすい。
+      </p>
+
+      <h3 style="margin-top:46px;">視聴者メリット</h3>
+      <ul class="merit-list">
+        <li><span class="mk">1</span><span class="mt">サービスの全体像が “流れ” で一気に分かる</span></li>
+        <li><span class="mk">2</span><span class="mt">「自分でも使えそう」というハードルの低さが伝わる</span></li>
+        <li><span class="mk">3</span><span class="mt">出演者のリアルな反応で、安心感・親近感が生まれる</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 撮影パート -->
+  <section class="bg-gray">
+    <div class="wrap">
+      <span class="label">Flow</span>
+      <div class="accent-line"></div>
+      <h2>撮影パート — サービスの流れ</h2>
+      <div class="flow">
+        <div class="flow-item">
+          <div class="flow-num">01</div>
+          <div class="flow-step">
+            <div class="st">エージェントとの面談</div>
+            <div class="sd">担当エージェントと初回カウンセリング。希望・不安をヒアリングしてもらう様子を見せる。</div>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">02</div>
+          <div class="flow-step">
+            <div class="st">履歴書作成</div>
+            <div class="sd">プロのサポートを受けながら履歴書を作成。自己PR・志望動機の言語化を手伝ってもらう。</div>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">03</div>
+          <div class="flow-step">
+            <div class="st">研修</div>
+            <div class="sd">就業前研修を体験。未経験でも安心できるフォロー内容を見せる。</div>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">04</div>
+          <div class="flow-step">
+            <div class="st">模擬面接</div>
+            <div class="sd">本番を想定した面接練習。フィードバックで「成長が見える」締めにする。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 想定尺・構成イメージ -->
+  <section class="bg-white">
+    <div class="wrap">
+      <span class="label">Format</span>
+      <div class="accent-line"></div>
+      <h2>想定尺・構成イメージ</h2>
+      <div class="spec-card">
+        <div class="spec-row">
+          <div class="spec-k">構成</div>
+          <div class="spec-v">4ステップを軸にした密着構成（1本完結）</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">尺配分</div>
+          <div class="spec-v">各パートの尺配分は調整（要相談）</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-k">見せ方</div>
+          <div class="spec-v">各パートで「ビフォー → アフター」の変化が見えると訴求が強い</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fl">昼ジョブ 動画企画提案</div>
+    <div class="fs">camys</div>
+  </footer>
+
+</body>
+</html>
