@@ -121,6 +121,43 @@
   footer .fl{font-size:18px;font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:8px;}
   footer .fs{font-size:13px;color:#8be9f8;letter-spacing:.1em;}
 
+  /* 強み訴求(push) */
+  .flow-push{
+    margin-top:16px;padding:13px 16px;border-radius:9px;
+    background:linear-gradient(135deg,rgba(6,182,212,.09),rgba(30,58,95,.05));
+    border:1px solid rgba(6,182,212,.28);
+  }
+  .flow-push .pl{
+    display:inline-block;font-size:11px;letter-spacing:.12em;font-weight:800;
+    color:var(--cyan);margin-bottom:5px;
+  }
+  .flow-push .pt{font-size:14px;color:var(--navy);font-weight:600;line-height:1.75;}
+
+  /* 参考動画 */
+  .ref-grid{display:flex;gap:20px;margin-top:30px;flex-wrap:wrap;}
+  .ref-card{
+    flex:1;min-width:280px;max-width:460px;background:var(--white);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(30,58,95,.08);
+    text-decoration:none;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;
+  }
+  .ref-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(30,58,95,.15);}
+  .ref-thumb{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;}
+  .ref-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .ref-thumb:before{
+    content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:60px;height:60px;border-radius:50%;background:rgba(6,182,212,.94);
+    box-shadow:0 4px 16px rgba(0,0,0,.35);z-index:1;
+  }
+  .ref-thumb:after{
+    content:"";position:absolute;left:50%;top:50%;transform:translate(-44%,-50%);
+    width:0;height:0;border-style:solid;border-width:11px 0 11px 19px;
+    border-color:transparent transparent transparent #fff;z-index:2;
+  }
+  .ref-body{padding:20px 22px;}
+  .ref-tag{display:inline-block;font-size:11px;letter-spacing:.08em;font-weight:800;color:#fff;background:var(--grad);padding:4px 12px;border-radius:5px;margin-bottom:12px;}
+  .ref-title{font-size:17px;font-weight:700;color:var(--ink);line-height:1.5;margin-bottom:10px;}
+  .ref-note{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+
   @media(max-width:640px){
     .hero h1{font-size:33px;}
     .hero .lead{font-size:16px;}
@@ -205,12 +242,17 @@
       <span class="label">Flow</span>
       <div class="accent-line"></div>
       <h2>撮影パート — サービスの流れ</h2>
-      <div class="flow">
+      <p class="lead-text" style="margin-top:20px;">各工程はただの流れ紹介で終わらせず、<strong>それぞれのステップで昼ジョブならではの強みを動画内でしっかり訴求</strong>します。下の「昼ジョブの強み」が、各パートで打ち出す差別化ポイントです。</p>
+      <div class="flow" style="margin-top:30px;">
         <div class="flow-item">
           <div class="flow-num">01</div>
           <div class="flow-step">
             <div class="st">エージェントとの面談</div>
             <div class="sd">担当エージェントと初回カウンセリング。希望・不安をヒアリングしてもらう様子を見せる。</div>
+            <div class="flow-push">
+              <span class="pl">昼ジョブの強み</span>
+              <div class="pt">エージェントは全員が夜職経験者。同じ道を通ったからこそ本音で相談できる安心感を訴求。あわせて、これまでの転職実績（成功事例）も提示して信頼を伝える。</div>
+            </div>
           </div>
         </div>
         <div class="flow-item">
@@ -218,6 +260,10 @@
           <div class="flow-step">
             <div class="st">履歴書作成</div>
             <div class="sd">プロのサポートを受けながら履歴書を作成。自己PR・志望動機の言語化を手伝ってもらう。</div>
+            <div class="flow-push">
+              <span class="pl">昼ジョブの強み</span>
+              <div class="pt">夜職の経験を「強み」に変える履歴書の書き方ノウハウを訴求。自分では気づけない魅力を、プロの言語化サポートで引き出す。</div>
+            </div>
           </div>
         </div>
         <div class="flow-item">
@@ -225,6 +271,10 @@
           <div class="flow-step">
             <div class="st">研修</div>
             <div class="sd">就業前研修を体験。未経験でも安心できるフォロー内容を見せる。</div>
+            <div class="flow-push">
+              <span class="pl">昼ジョブの強み</span>
+              <div class="pt">就業前研修という独自サービスを前面に。未経験から安心して働き出せる手厚さは、他社にはない差別化ポイントとして打ち出す。</div>
+            </div>
           </div>
         </div>
         <div class="flow-item">
@@ -232,6 +282,10 @@
           <div class="flow-step">
             <div class="st">模擬面接</div>
             <div class="sd">本番を想定した面接練習。フィードバックで「成長が見える」締めにする。</div>
+            <div class="flow-push">
+              <span class="pl">昼ジョブの強み</span>
+              <div class="pt">本番想定の模擬面接で、面接対策までしっかりできることを訴求。受け答えへのフィードバックで「これなら受かる」という手応えまで見せる。</div>
+            </div>
           </div>
         </div>
       </div>
@@ -257,6 +311,28 @@
           <div class="spec-k">見せ方</div>
           <div class="spec-v">各パートで「ビフォー → アフター」の変化が見えると訴求が強い</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 完成イメージ -->
+  <section class="bg-gray">
+    <div class="wrap">
+      <span class="label">Reference</span>
+      <div class="accent-line"></div>
+      <h2>完成イメージ（参考動画）</h2>
+      <p class="lead-text" style="margin-top:20px;">
+        実際の仕上がりに近いトーン・構成の動画です。<strong>「体験に密着し、努力や変化・成長を見せる」</strong>という本企画の方向性を、具体的にイメージしていただけます。
+      </p>
+      <div class="ref-grid">
+        <a class="ref-card" href="https://youtu.be/kU7I2W74tEs" target="_blank" rel="noopener">
+          <div class="ref-thumb"><img src="https://i.ytimg.com/vi/kU7I2W74tEs/hqdefault.jpg" alt="参考動画サムネイル" loading="lazy"></div>
+          <div class="ref-body">
+            <div class="ref-tag">camys制作 — ぶーちゃんねる</div>
+            <div class="ref-title">アイドルになるために、先輩に提案してみたら…</div>
+            <div class="ref-note">出演：まなみ・アイラ・あおい。目標に向かって動き、葛藤しながら成長していく姿に密着した一本。本企画の基本キャストが実際に出演しているため、完成イメージとクオリティがそのまま伝わります。</div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
